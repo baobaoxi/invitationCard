@@ -1,0 +1,138 @@
+body,
+p,
+div,
+img {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background: #a89172;
+    box-shadow: 0 0 150px #5e4a41 inset;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.loading-page .loading-bar {
+    width: 8rem;
+    height: 3px;
+    background: #fff;
+    display: block;
+    border-radius: 18px;
+    margin: 0 auto;
+    top: 220px;
+    position: relative;
+}
+
+.loading-bar .loading-bar-act {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 3px;
+    width: 0;
+    background: #5e4a41;
+}
+
+
+/*
+.timecount-wrap{
+    width: 9rem;
+    height: 9rem;
+    margin:  0 auto;
+    position: relative;
+    top: 50%;
+    display: block;
+}
+.timecount-wrap .timecount-box{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: -50%;
+}
+.timecount-box .timecount-item{
+    width: 100%;
+    height: 100%;
+    font-size:8rem;
+    font-family: 'macrosot yahei';
+    font-weight: 700;
+    position: absolute;
+    left: 0;
+    top: 0;
+    line-height: 9rem;
+    text-align: center;
+}*/
+
+.previous-page {}
+
+.previous-page .person-img {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    opacity: 0;
+}
+
+.previous-page .previous-text-box {
+    width: 12rem;
+    height: 2rem;
+}
+
+.previous-page .previous-text-box .previous-text-1 {
+    background: url(./../img/previous-text-1.png) no-repeat;
+    width: 1.8rem;
+    height: 1.8rem;
+    background-size: 100%;
+}
+
+.previous-page .previous-text-box .previous-text-2 {
+    background: url(./../img/previous-text-2.png) no-repeat;
+    width: 1.8rem;
+    height: 1.8rem;
+    background-size: 100%;
+}
+
+.previous-page .previous-text-box .previous-text-3 {
+    background: url(./../img/previous-text-3.png) no-repeat;
+    width: 1.8rem;
+    height: 1.8rem;
+    background-size: 100%;
+}
+
+.previous-page .previous-text-box .previous-text-4 {
+    background: url(./../img/previous-text-4.png) no-repeat;
+    width: 1.8rem;
+    height: 1.8rem;
+    background-size: 100%;
+}
+
+.previous-page .previous-text-box .previous-text-5 {
+    background: url(./../img/previous-text-5.png) no-repeat;
+    width: 1.8rem;
+    height: 1.8rem;
+    background-size: 100%;
+}
+
+.school-wrap {}
+
+.school-wrap .school-img-box {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.school-wrap .school-img-box img {
+    position: relative;
+}
