@@ -1,0 +1,40 @@
+#J_2013{
+    
+}
+.beijing-img-box{
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+#J_2013 .beijing-img-box .beijing-img1{
+    height: 100%;
+    left: -40%;
+    -webkit-animation: beijinghide 4s linear infinite;
+    -webkit-animation-delay: 4s;
+    position: absolute;
+    top: 0;
+    
+}
+#J_2013 .beijing-img-box .beijing-img2{
+     height: 100%;
+    left: -40%;
+    -webkit-animation: beijingshow 4s linear infinite;
+    -webkit-animation-delay: 4s;
+    opacity:0;
+    position: absolute;
+    top: 0;
+}
+@-webkit-keyframes beijinghide {
+    0% {}
+    100% {
+        opacity: .0;
+       
+    }
+}
+@-webkit-keyframes beijingshow {
+    0% {}
+    100% {
+        opacity: 1;
+     
+    }
+}

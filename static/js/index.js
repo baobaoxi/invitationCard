@@ -18,6 +18,6 @@ $(document).ready(function () {
         $('.loading-page').hide();
         prevousFun();
     }, 500);
-    animateFun2012();
+//    animateFun2012();
 
 });
