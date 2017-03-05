@@ -11,13 +11,104 @@ var animateFun2012 = function () {
     $('.school-img-box img').css({
         left: (imgboxWidth - imgWidth) / 2
     });
+};
+var hidePre = function () {
+    $(document).on('click', '.name-and', function () {
+        $('#J_pre-page').addClass('pagehide');
+        $('#J_main-photo-wrap').show();
+        $('#J_2012').addClass('pageshow');
+        setTimeout(function () {
+            $('#J_pre-page').hide();
+        }, 1500);
+    });
+};
+var show2014 = function () {
+    $('#J_2014 .biye-img-box').addClass('biye-act');
+};
+var hide2012 = function () {
+    $(document).on('click', '.J_2012-click', function () {
+        $('.cloud-wrap').addClass('pagehide');
+        $('.school-img').addClass('pagehide');
+        $('#J_2012').addClass('pagehide').removeClass('pageshow');
+        $('.school-door').addClass('school-door-act');
+        $('#J_2014').addClass('pageshow');
+        setTimeout(function () {
+            $('#J_2012').hide();
+            show2014();
+        }, 3000);
+    });
+};
+var hide2014 = function () {
+    $(document).on('click', '.J_2014-click', function () {
+        $('#J_2014').addClass('pagehide');
+        $('#J_2015-17').addClass('pageshow');
+        setTimeout(function () {
+            $('#J_2014').hide();
+        }, 1500);
+    });
+};
+var hide2015 = function () {
+    $(document).on('click', '.J_2015-click', function () {
+        $('#J_2015-17').addClass('pagehide');
+        $('#J_2016').addClass('pageshow');
+        setTimeout(function () {
+            $('#J_2015-17').hide();
+        }, 1500);
+        $('#J_2016').addClass('certificate-active');
+    });
 }
 $(document).ready(function () {
     loadingAnimate('100%');
     setTimeout(function () {
         $('.loading-page').hide();
-        prevousFun();
     }, 500);
-//    animateFun2012();
+
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        direction: 'vertical',
+        speed: 500,
+        onSlideChangeStart: function () {
+            slideract();
+        }
+    });
+    var slideract = function () {
+            // 学校
+            //         alert(swiper.realIndex);
+            var reClass = function (className1, className2) {
+                setTimeout(function () {
+                    $(className1).removeClass(className2)
+                }, 500)
+            }
+            if (swiper.realIndex == 1) {
+                reClass($('.biye-img-box'), 'biye-act');
+                //             setTimeout(function(){
+                //                 $('.biye-img-box').removeClass('biye-act');
+                //             },500);
+
+            }
+            if (swiper.realIndex == 2) {
+                $('.biye-img-box').addClass('biye-act');
+            }
+            if (swiper.realIndex == 3) {
+                reClass($('.biye-img-box'), 'biye-act');
+                reClass($('#J_2016'), 'certificate-active');
+//
+//                $('.biye-img-box').removeClass('biye-act');
+//                $('#J_2016').removeClass('certificate-active');
+            }
+            if (swiper.realIndex == 4) {
+                $('#J_2016').addClass('certificate-active');
+            }
+            if (swiper.realIndex == 5) {
+                reClass($('#J_2016'), 'certificate-active');
+//                $('#J_2016').removeClass('certificate-active');
+            }
+        }
+        //    hidePre();
+        //    hide2012();
+        //    hide2014();
+        //    hide2015();
+        //    animateFun2012();
 
 });
