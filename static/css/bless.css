@@ -1,0 +1,19 @@
+#J_bless-wrap .bless-list-wrap {
+	
+	height: calc(100% - 40px);
+	position: relative;
+	overflow-y: auto;
+}
+.bless-list-wrap .bless-item{
+	padding: 10px;
+	background: rgba(0,0,0,.5);
+	display: block;
+	margin: 10px 60px 10px 10px;
+	border-radius: 4px;
+	
+	color: #fff;
+	font-size: 13px;
+}
+.bless-list-wrap .bless-fr{
+	margin: 10px 10px 10px 60px;
+}
