@@ -1,0 +1,98 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'fisp' ]
+2 info using npm@3.10.8
+3 info using node@v6.9.1
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readGlobalPackageData
+7 silly fetchPackageMetaData fisp
+8 silly fetchNamedPackageData fisp
+9 silly mapToRegistry name fisp
+10 silly mapToRegistry using default registry
+11 silly mapToRegistry registry http://npm.taobao.org/mirrors
+12 silly mapToRegistry data Result {
+12 silly mapToRegistry   raw: 'fisp',
+12 silly mapToRegistry   scope: null,
+12 silly mapToRegistry   escapedName: 'fisp',
+12 silly mapToRegistry   name: 'fisp',
+12 silly mapToRegistry   rawSpec: '',
+12 silly mapToRegistry   spec: 'latest',
+12 silly mapToRegistry   type: 'tag' }
+13 silly mapToRegistry uri http://npm.taobao.org/mirrors/fisp
+14 verbose request uri http://npm.taobao.org/mirrors/fisp
+15 verbose request no auth needed
+16 info attempt registry request try #1 at 11:35:39
+17 verbose request id f382e7ea66732bf6
+18 http request GET http://npm.taobao.org/mirrors/fisp
+19 http 404 http://npm.taobao.org/mirrors/fisp
+20 verbose bad json Not Found
+21 error registry error parsing json
+22 verbose headers { server: 'nginx/1.4.6 (Ubuntu)',
+22 verbose headers   date: 'Thu, 06 Apr 2017 03:35:38 GMT',
+22 verbose headers   'content-type': 'text/plain; charset=utf-8',
+22 verbose headers   'content-length': '9',
+22 verbose headers   connection: 'keep-alive',
+22 verbose headers   vary: 'Accept-Encoding',
+22 verbose headers   'x-response-time': '0' }
+23 silly get cb [ 404,
+23 silly get   { server: 'nginx/1.4.6 (Ubuntu)',
+23 silly get     date: 'Thu, 06 Apr 2017 03:35:38 GMT',
+23 silly get     'content-type': 'text/plain; charset=utf-8',
+23 silly get     'content-length': '9',
+23 silly get     connection: 'keep-alive',
+23 silly get     vary: 'Accept-Encoding',
+23 silly get     'x-response-time': '0' } ]
+24 silly fetchPackageMetaData SyntaxError: Unexpected token N in JSON at position 0
+24 silly fetchPackageMetaData Not Found
+24 silly fetchPackageMetaData     at Object.parse (native)
+24 silly fetchPackageMetaData     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:237:23)
+24 silly fetchPackageMetaData     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:210:14)
+24 silly fetchPackageMetaData     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:187:22)
+24 silly fetchPackageMetaData     at emitTwo (events.js:106:13)
+24 silly fetchPackageMetaData     at Request.emit (events.js:191:7)
+24 silly fetchPackageMetaData     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1044:10)
+24 silly fetchPackageMetaData     at emitOne (events.js:96:13)
+24 silly fetchPackageMetaData     at Request.emit (events.js:188:7)
+24 silly fetchPackageMetaData     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:965:12)
+24 silly fetchPackageMetaData  error for fisp SyntaxError: Unexpected token N in JSON at position 0
+24 silly fetchPackageMetaData Not Found
+24 silly fetchPackageMetaData     at Object.parse (native)
+24 silly fetchPackageMetaData     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:237:23)
+24 silly fetchPackageMetaData     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:210:14)
+24 silly fetchPackageMetaData     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:187:22)
+24 silly fetchPackageMetaData     at emitTwo (events.js:106:13)
+24 silly fetchPackageMetaData     at Request.emit (events.js:191:7)
+24 silly fetchPackageMetaData     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1044:10)
+24 silly fetchPackageMetaData     at emitOne (events.js:96:13)
+24 silly fetchPackageMetaData     at Request.emit (events.js:188:7)
+24 silly fetchPackageMetaData     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:965:12)
+25 silly rollbackFailedOptional Starting
+26 silly rollbackFailedOptional Finishing
+27 silly runTopLevelLifecycles Finishing
+28 silly install printInstalled
+29 verbose stack SyntaxError: Unexpected token N in JSON at position 0
+29 verbose stack Not Found
+29 verbose stack     at Object.parse (native)
+29 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:237:23)
+29 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:210:14)
+29 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:187:22)
+29 verbose stack     at emitTwo (events.js:106:13)
+29 verbose stack     at Request.emit (events.js:191:7)
+29 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1044:10)
+29 verbose stack     at emitOne (events.js:96:13)
+29 verbose stack     at Request.emit (events.js:188:7)
+29 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:965:12)
+30 verbose cwd /Users/xinyangxi/Documents/work/demo/invitationCard2
+31 error Darwin 15.5.0
+32 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "-g" "fisp"
+33 error node v6.9.1
+34 error npm  v3.10.8
+35 error Unexpected token N in JSON at position 0
+35 error Not Found
+36 error If you need help, you may report this error at:
+36 error     <https://github.com/npm/npm/issues>
+37 verbose exit [ 1, true ]
