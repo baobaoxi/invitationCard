@@ -171,9 +171,21 @@
     width: 130%;
     bottom: 0;
     left: -15%;
-    /*
-    
-*/
+}
+.school-wrap-act .school-img-box .school-img {
+    -webkit-animation: schoolImg 5s;
+    -webkit-animation-direction: normal;
+    -webkit-animation-delay: 6s;
+    -webkit-animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes schoolImg {
+    0% {
+       opacity: 1;
+    }
+    100% {
+        opacity: 0.6;
+    }
 }
 
 .school-wrap .school-img-box .school-door {
@@ -241,6 +253,8 @@
 }
 #J_2012 .star-bg img{
 	position: absolute;
+    width: 20px;
+    height: 20px;
 }
 @-webkit-keyframes showStar {
     0% {
