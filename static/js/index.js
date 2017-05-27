@@ -110,17 +110,24 @@ var hide2015 = function () {
         $('#J_2016').addClass('certificate-active');
     });
 };
-var renderStar = function(){
-	var starLenth = $('.star-bg img').length;
-	$.each($('.star-bg img'),function(key,value){
-		var random1 = Math.random()*100+1;
-		var random2 = Math.random()*100+1;
-		if(key < starLenth/2){
-			$($('.star-bg img')[key]).css({'top':random1+'%','left':random2+'%'});
-		}else{
-			$($('.star-bg img')[key]).css({'top':random1+'%','right':random2+'%'});
-		}
-	})
+var renderStar = function () {
+    var starLenth = $('.star-bg img').length;
+    $.each($('.star-bg img'), function (key, value) {
+        var random1 = Math.random() * 100 + 1;
+        var random2 = Math.random() * 100 + 1;
+        if (key < starLenth / 2) {
+            $($('.star-bg img')[key]).css({
+                'top': random1 + '%',
+                'left': random2 + '%'
+            });
+        }
+        else {
+            $($('.star-bg img')[key]).css({
+                'top': random1 + '%',
+                'right': random2 + '%'
+            });
+        }
+    })
 };
 var renderBless = function () {
     var tpl = '';
@@ -138,8 +145,8 @@ var renderBless = function () {
             '</span>';
     });
     $('.bless-list-ul').html(tpl);
-	
-//	renderStar();
+
+    //	renderStar();
 
 
 };
@@ -159,6 +166,35 @@ $(document).ready(function () {
             slideract();
         }
     });
+    var swiper2 = new Swiper('#J_other-photo-wrap', {
+        paginationClickable: true,
+        speed: 500,
+        onSlideChangeStart: function () {
+            photoAct();
+        }
+    });
+    var photoAct = function () {
+        var reClass = function (className1, className2) {
+            setTimeout(function () {
+                $(className1).removeClass(className2);
+            }, 500);
+        };
+        var addClass = function (className1, className2) {
+            setTimeout(function () {
+                $(className1).addClass(className2);
+            }, 500);
+        };
+		//去掉前后的act状态class
+		if($('#J_other-photo-wrap .photo-li')[swiper2.realIndex+1]){
+			reClass($('#J_other-photo-wrap .photo-li')[swiper2.realIndex+1], 'photo-li-act'+[swiper2.realIndex]);
+		}
+        if($('#J_other-photo-wrap .photo-li')[swiper2.realIndex-1]){
+			reClass($('#J_other-photo-wrap .photo-li')[swiper2.realIndex-1], 'photo-li-act'+[swiper2.realIndex]);
+		}
+		//给当前photo加act状态的class
+        addClass($('#J_other-photo-wrap .photo-li')[swiper2.realIndex], 'photo-li-act'+[swiper2.realIndex]);
+
+    };
     var slideract = function () {
             // 学校
             //         alert(swiper.realIndex);
@@ -166,10 +202,10 @@ $(document).ready(function () {
                 setTimeout(function () {
                     $(className1).removeClass(className2);
                 }, 500);
-            }
+            };
             if (swiper.realIndex == 1) {
                 reClass($('.biye-img-box'), 'biye-act');
-				$('.school-wrap').addClass('school-wrap-act');
+                $('.school-wrap').addClass('school-wrap-act');
                 //             setTimeout(function(){
                 //                 $('.biye-img-box').removeClass('biye-act');
                 //             },500);

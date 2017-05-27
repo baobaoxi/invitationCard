@@ -12,34 +12,34 @@
 }
 
 .biye-act .biye-img1 {
-    -webkit-animation: beijinghide 3s;
+    -webkit-animation: beijinghide 4s;
     -webkit-animation-direction: normal;
-    -webkit-animation-delay: 0.2s;
+    -webkit-animation-delay: 1s;
     -webkit-animation-fill-mode: forwards;
 }
 
 #J_2014 .biye-img-box .biye-img2 {
-    height: 100%;
+     height: 200%;
     opacity: 0;
     position: absolute;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-54%) translateY(-43%);
 }
+
+
 
 .biye-act .biye-img2 {
-    -webkit-animation: beijingshow 3s;
+    -webkit-animation: beijingshow 4s;
     -webkit-animation-direction: normal;
-    -webkit-animation-delay: 0.2s;
+    -webkit-animation-delay: 1s;
     -webkit-animation-fill-mode: forwards;
 }
-
 @-webkit-keyframes beijinghide {
     0% {}
     100% {
         opacity: .0;
     }
 }
-
 @-webkit-keyframes beijingshow {
     0% {}
     100% {
