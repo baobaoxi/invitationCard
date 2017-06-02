@@ -1,56 +1,3 @@
-var blessData = [{
-        name: '阿白',
-        text: '百年好合'
-    }, {
-        name: '阿白',
-        text: '百年好合'
-    }, {
-        name: '阿白',
-        text: '百年好合'
-    }, {
-        name: '阿白',
-        text: '百年好合'
-    }, {
-        name: '阿白',
-        text: '百年好合'
-    },
-
-    {
-        name: '阿白',
-        text: '百年好合'
-    },
-
-    {
-        name: '阿白',
-        text: '百年好合'
-    },
-
-    {
-        name: '阿白',
-        text: '百年好合'
-    },
-
-    {
-        name: '阿白',
-        text: '百年好合'
-    },
-
-    {
-        name: '阿白',
-        text: '百年好合'
-    },
-
-    {
-        name: '阿白',
-        text: '百年好合'
-    },
-
-    {
-        name: '阿白',
-        text: '百年好合'
-    },
-
-];
 var loadingAnimate = function (w) {
     $('.loading-bar-act').animate({
         width: w
@@ -129,33 +76,13 @@ var renderStar = function () {
         }
     })
 };
-var renderBless = function () {
-    var tpl = '';
-    $.each(blessData, function (key, value) {
-        var blessClass;
-        if (key % 2 == 0) {
-            blessClass = "bless-fl";
-        }
-        else {
-            blessClass = "bless-fr";
-        }
-        tpl += ' <span class="bless-item ' + blessClass + '">' +
-            '<label class="name">' + value.name + '</label>' +
-            '<label class="text">' + value.text + '</label>' +
-            '</span>';
-    });
-    $('.bless-list-ul').html(tpl);
 
-    //	renderStar();
-
-
-};
 $(document).ready(function () {
     loadingAnimate('100%');
     setTimeout(function () {
         $('.loading-page').hide();
     }, 500);
-
+    //整体上下滚动
     var swiper = new Swiper('.swiper-container', {
         pagination: '.swiper-pagination',
         paginationClickable: true,
@@ -166,6 +93,7 @@ $(document).ready(function () {
             slideract();
         }
     });
+    // 婚纱照部分滚动
     var swiper2 = new Swiper('#J_other-photo-wrap', {
         paginationClickable: true,
         speed: 500,
@@ -173,6 +101,8 @@ $(document).ready(function () {
             photoAct();
         }
     });
+
+
     var photoAct = function () {
         var reClass = function (className1, className2) {
             setTimeout(function () {
@@ -184,49 +114,48 @@ $(document).ready(function () {
                 $(className1).addClass(className2);
             }, 500);
         };
-		//去掉前后的act状态class
-		if($('#J_other-photo-wrap .photo-li')[swiper2.realIndex+1]){
-			reClass($('#J_other-photo-wrap .photo-li')[swiper2.realIndex+1], 'photo-li-act'+[swiper2.realIndex]);
-		}
-        if($('#J_other-photo-wrap .photo-li')[swiper2.realIndex-1]){
-			reClass($('#J_other-photo-wrap .photo-li')[swiper2.realIndex-1], 'photo-li-act'+[swiper2.realIndex]);
-		}
-		//给当前photo加act状态的class
-        addClass($('#J_other-photo-wrap .photo-li')[swiper2.realIndex], 'photo-li-act'+[swiper2.realIndex]);
+        //去掉前后的act状态class
+        if ($('#J_other-photo-wrap .photo-li')[swiper2.realIndex + 1]) {
+            reClass($('#J_other-photo-wrap .photo-li')[swiper2.realIndex + 1], 'photo-li-act' + [swiper2.realIndex]);
+        }
+        if ($('#J_other-photo-wrap .photo-li')[swiper2.realIndex - 1]) {
+            reClass($('#J_other-photo-wrap .photo-li')[swiper2.realIndex - 1], 'photo-li-act' + [swiper2.realIndex]);
+        }
+        //给当前photo加act状态的class
+        addClass($('#J_other-photo-wrap .photo-li')[swiper2.realIndex], 'photo-li-act' + [swiper2.realIndex]);
 
     };
     var slideract = function () {
             // 学校
-            //         alert(swiper.realIndex);
             var reClass = function (className1, className2) {
                 setTimeout(function () {
                     $(className1).removeClass(className2);
                 }, 500);
             };
+            // 1 学校背景
             if (swiper.realIndex == 1) {
                 reClass($('.biye-img-box'), 'biye-act');
                 $('.school-wrap').addClass('school-wrap-act');
-                //             setTimeout(function(){
-                //                 $('.biye-img-box').removeClass('biye-act');
-                //             },500);
 
             }
+            // 2 毕业照 & 学校门口婚纱照
             if (swiper.realIndex == 2) {
                 $('.biye-img-box').addClass('biye-act');
-            }
-            if (swiper.realIndex == 3) {
-                reClass($('.biye-img-box'), 'biye-act');
+
                 reClass($('#J_2016'), 'certificate-active');
-                //
-                //                $('.biye-img-box').removeClass('biye-act');
-                //                $('#J_2016').removeClass('certificate-active');
             }
-            if (swiper.realIndex == 4) {
+            // 3 结婚证
+            if (swiper.realIndex == 3) {
                 $('#J_2016').addClass('certificate-active');
             }
-            if (swiper.realIndex == 5) {
+            // 4 婚纱照横滑
+            if (swiper.realIndex == 4) {
                 reClass($('#J_2016'), 'certificate-active');
                 //                $('#J_2016').removeClass('certificate-active');
+            }
+            // 5 bless
+            if (swiper.realIndex == 5) {
+                bless.blessSwiper();
             }
         }
         //    hidePre();
@@ -234,6 +163,6 @@ $(document).ready(function () {
         //    hide2014();
         //    hide2015();
         //    animateFun2012();
-    renderBless();
+    bless.renderBless();
 
 });

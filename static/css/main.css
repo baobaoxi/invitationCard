@@ -5,9 +5,11 @@ img {
     margin: 0;
     padding: 0;
 }
-.hidden{
+
+.hidden {
     display: none;
 }
+
 html {
     width: 100%;
     height: 100%;
@@ -19,13 +21,14 @@ body {
     font-family: ZHSRXT;
     background: #a89172;
     box-shadow: 0 0 200px #5e4a41 inset;
-   
 }
-#J_pre-page{
-     background: url(./../img/card-bg.jpg);
-      background-size: 100%;
-      box-shadow: 0 0 200px #5e4a41 inset;
+
+#J_pre-page {
+    background: url(./../img/card-bg.jpg);
+    background-size: 100%;
+    box-shadow: 0 0 200px #5e4a41 inset;
 }
+
 .clearfix:after {
     content: '\0020';
     display: block;
@@ -35,21 +38,24 @@ body {
 }
 
 .clearfix {
-    *zoom:1}
-.swiper-wrapper{
+    *zoom: 1
+}
+
+.swiper-wrapper {
     height: 800%;
 }
-.swiper-slide{
+
+.swiper-slide {
     overflow: hidden;
 }
-body {
-    
-}
+
+body {}
+
 #J_main-photo-wrap,
 #J_other-photo-wrap,
 #J_bless-wrap,
-#J_sign-wrap{
-/*    display: none;*/
+#J_sign-wrap {
+    /*    display: none;*/
 }
 
 .wrapper {
@@ -116,28 +122,30 @@ body {
     bottom: 0;
     width: 2rem;
     opacity: 0;
-    -webkit-animation: personimg  2s;
+    -webkit-animation: personimg 2s;
     -webkit-animation-delay: 0;
-    -webkit-animation-direction:normal;
+    -webkit-animation-direction: normal;
     -webkit-animation-fill-mode: forwards;
 }
-@-webkit-keyframes personimg{
-    0%{
+
+@-webkit-keyframes personimg {
+    0% {
         left: 7rem;
         width: 2rem;
         opacity: 0;
     }
-    80%{
+    80% {
         left: -1rem;
-         width: 18rem;
+        width: 18rem;
         opacity: 0.8;
     }
-    100%{
+    100% {
         left: 0rem;
-         width: 16rem;
+        width: 16rem;
         opacity: 1;
     }
 }
+
 .previous-page .previous-text-box {
     width: 14rem;
     display: block;
@@ -214,63 +222,64 @@ body {
     animation-name: flipInY
 }
 
-.previous-name{
+.previous-name {
     position: relative;
     height: 4rem;
     width: 100%;
 }
-.previous-name .name-man{
+
+.previous-name .name-man {
     position: absolute;
     color: #fff;
     font-size: 1.2rem;
     left: -20rem;
     top: 0.8rem;
-/*    transform: rotate(15deg);*/
-    -webkit-animation: nameman  2s;
+    /*    transform: rotate(15deg);*/
+    -webkit-animation: nameman 2s;
     -webkit-animation-delay: 2s;
-    -webkit-animation-direction:normal;
+    -webkit-animation-direction: normal;
     -webkit-animation-fill-mode: forwards;
 }
-@-webkit-keyframes nameman{
-    0%{
+
+@-webkit-keyframes nameman {
+    0% {
         left: -20rem;
     }
-    40%{
+    40% {
         left: 10rem;
-        
     }
-    100%{
+    100% {
         left: 2rem;
-        
     }
 }
-.previous-name .name-female{
+
+.previous-name .name-female {
     position: absolute;
     color: #fff;
     font-size: 1.2rem;
     right: -20rem;
     top: 0.8rem;
-/*    transform: rotate(15deg);*/
-    -webkit-animation: namefemale  2s;
+    /*    transform: rotate(15deg);*/
+    -webkit-animation: namefemale 2s;
     -webkit-animation-delay: 2s;
-    -webkit-animation-direction:normal;
+    -webkit-animation-direction: normal;
     -webkit-animation-fill-mode: forwards;
 }
-@-webkit-keyframes namefemale{
-    0%{
+
+@-webkit-keyframes namefemale {
+    0% {
         right: -20rem;
     }
-    40%{
+    40% {
         right: 10rem;
-        
     }
-    100%{
+    100% {
         right: 2rem;
-        
     }
 }
-.previous-name .name-and{
-   background: url(./../img/and.png);
+
+.previous-name .name-and {
+    background: url(./../img/and.png);
     position: absolute;
     left: 6rem;
     top: 0.6rem;
@@ -284,39 +293,44 @@ body {
     opacity: 0;
     background-size: 100%;
 }
-@-webkit-keyframes in3iehj6bbk3u8ggmn29{    0% {
+
+@-webkit-keyframes in3iehj6bbk3u8ggmn29 {
+    0% {
         -webkit-transform: scaleX(1) scaleY(1) translateX(0px) translateY(0px) rotate(0deg) rotateX(0deg) rotateY(0deg);
         opacity: 0;
     }
     100% {
         -webkit-transform: scaleX(1) scaleY(1) translateX(0px) translateY(0px) rotate(0deg) rotateX(0deg) rotateY(360deg);
         opacity: 1;
-    }} 
+    }
+}
 
-.pagehide{
+.pagehide {
     -webkit-animation: photohide 1.5s;
-    -webkit-animation-direction:normal;
-    -webkit-animation-fill-mode: forwards;
-}
-.pageshow{
-    -webkit-animation: pageshow 1.5s;
-    -webkit-animation-direction:normal;
+    -webkit-animation-direction: normal;
     -webkit-animation-fill-mode: forwards;
 }
 
-@-webkit-keyframes pagehide{
-    0%{
+.pageshow {
+    -webkit-animation: pageshow 1.5s;
+    -webkit-animation-direction: normal;
+    -webkit-animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes pagehide {
+    0% {
         opacity: 1;
     }
-    100%{
+    100% {
         opacity: 0;
     }
 }
-@-webkit-keyframes pageshow{
-    0%{
+
+@-webkit-keyframes pageshow {
+    0% {
         opacity: 0;
     }
-    100%{
+    100% {
         opacity: 1;
     }
 }
