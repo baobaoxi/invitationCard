@@ -1,0 +1,400 @@
+.photos-ul {
+    height: 100%;
+}
+
+.photo-li img {}
+
+.photo-li .photo-1 {}
+
+.photo-li-act0 {}
+
+.photo-li img {
+    position: relative;
+}
+
+.photo-li .spv {
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.photo-li .photo-1-1 {
+    -webkit-filter: blur(2px) grayscale(1);
+    -moz-filter: blur(2px) grayscale(1);
+    -o-filter: blur(2px) grayscale(1);
+    -ms-filter: blur(2px) grayscale(1);
+    filter: blur(2px) grayscale(1);
+    opacity: .7;
+	transform: translateX(-50%) scale(1);
+}
+
+.photo-li-act1 .photo-1-1 {
+    -webkit-animation: photo11 3s;
+    -webkit-animation-delay: 1s;
+    -webkit-animation-direction: normal;
+    -webkit-animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes photo11 {
+    0% {
+        -webkit-filter: blur(2px) grayscale(1);
+        -moz-filter: blur(2px) grayscale(1);
+        -o-filter: blur(2px) grayscale(1);
+        -ms-filter: blur(2px) grayscale(1);
+        filter: blur(2px) grayscale(1);
+        opacity: .7;
+		transform:translateX(-50%) scale(1);
+    }
+    100% {
+        -webkit-filter: none;
+        -moz-filter: none;
+        -o-filter: none;
+        -ms-filter: none;
+        filter: none;
+        opacity: 1;
+		transform: translateX(-50%) scale(1.6);
+    }
+}
+
+.photo-li .photo-1-2 {
+    height: 50%;
+    left: 50%;
+    transform: translateX(-50%) scale(0);
+}
+
+.photo-li-act1 .photo-1-2 {
+    -webkit-animation: photo12 6s;
+    -webkit-animation-delay: 2s;
+    -webkit-animation-direction: normal;
+    -webkit-animation-fill-mode: forwards;
+	z-index: 2;
+}
+
+@-webkit-keyframes photo12 {
+    0% {
+        transform: translateX(-50%) scale(0) rotateX(0deg);
+    }
+	50%{
+		transform: translateX(-50%) scale(1) rotateX(360deg);
+	}
+    100% {
+        transform: translateX(-50%) translateY(50%) scale(2) rotateX(360deg);
+    }
+}
+
+.photo-li .photo-1-3 {
+    height: 50%;
+    left: 50%;
+    transform: translateX(-50%) scale(0);
+}
+
+.photo-li-act1 .photo-1-3 {
+    -webkit-animation: photo13 3s;
+    -webkit-animation-delay: 2s;
+    -webkit-animation-direction: normal;
+    -webkit-animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes photo13 {
+    0% {
+        transform: translateX(-50%) scale(0) rotateY(0deg);
+    }
+	
+    100% {
+        transform: translateX(-50%) scale(1) rotateY(-360deg);
+    }
+}
+
+.photo-li .photo-2-2 {
+    transform: translateY(-200%);
+}
+
+.photo-li-act2 .photo-2-2 {
+    -webkit-animation: photo22 3s;
+    -webkit-animation-delay: 1s;
+    -webkit-animation-direction: normal;
+    -webkit-animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes photo22 {
+    0% {
+        transform: translateX(-50%) translateY(-200%);
+    }
+	30% {
+        transform: translateX(-50%) translateY(-0%);
+    }
+	40% {
+        transform: translateX(-50%) translateY(-20%);
+    }
+	
+	45% {
+        transform: translateX(-50%) translateY(-0%);
+    }
+	57% {
+        transform: translateX(-50%) translateY(-15%);
+    }
+	71% {
+        transform: translateX(-50%) translateY(-0%);
+    }
+	83% {
+        transform: translateX(-50%) translateY(-10%);
+    }
+	92% {
+        transform: translateX(-50%) translateY(0%);
+    }
+	97% {
+        transform: translateX(-50%) translateY(-5%);
+    }
+	
+    100% {
+        transform: translateX(-50%) translateY(0%);
+    }
+}
+
+.photo-li .photo-3-1 {
+    height: 100%;
+    left: 50%;
+    transform: translateX(-20%);
+}
+
+.photo-li-act3 .photo-3-1 {
+    -webkit-animation: photo31 4s;
+    -webkit-animation-delay: 0s;
+    -webkit-animation-direction: normal;
+    -webkit-animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes photo31 {
+    0% {
+        transform: translateX(-20%);
+    }
+    100% {
+        transform: translateX(-70%);
+    }
+}
+
+.photo-li .photo-3-2 {
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(100%);
+}
+
+.photo-li-act3 .photo-3-2 {
+    -webkit-animation: photo32 4s;
+    -webkit-animation-delay: 2s;
+    -webkit-animation-direction: normal;
+    -webkit-animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes photo32 {
+    0% {
+        transform: translateX(-50%) translateY(100%);
+    }
+    100% {
+        transform: translateX(-50%) translateY(-100%);
+    }
+}
+
+.photo-li .photo-4-2 {
+    transform: translateX(-150%);
+    left: 50%;
+}
+
+.photo-li-act4 .photo-4-2 {
+    -webkit-animation: photo42 3s;
+    -webkit-animation-delay: 1s;
+    -webkit-animation-direction: normal;
+    -webkit-animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes photo42 {
+    0% {
+        transform: translateX(-150%);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.photo-li .photo-4-3 {
+    transform: translateX(-50%) scale(0) rotateX(0deg) rotateY(0deg);
+}
+
+.photo-li-act4 .photo-4-3 {
+    -webkit-animation: photo43 3s;
+    -webkit-animation-delay: 3s;
+    -webkit-animation-direction: normal;
+    -webkit-animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes photo43 {
+    0% {
+        transform: translateX(-50%) scale(0) rotateX(0deg) rotateY(0deg);
+    }
+    100% {
+        transform: translateX(-50%) scale(1) rotateX(360deg) rotateY(360deg);
+    }
+}
+
+.photo-li .photo-5-2 {
+    transform: translateX(-188%);
+    height: 50%;
+    left: 50%;
+}
+
+.photo-li-act5 .photo-5-2 {
+    -webkit-animation: photo52 4s;
+    -webkit-animation-delay: 0s;
+    -webkit-animation-direction: normal;
+    -webkit-animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes photo52 {
+    0% {
+        transform: translateX(-188%)
+    }
+    100% {
+        transform: translateX(-44%);
+    }
+}
+
+.photo-li .photo-5-3 {
+    transform: translateX(100%);
+    height: 50%;
+    left: 50%;
+}
+
+.photo-li-act5 .photo-5-3 {
+    -webkit-animation: photo53 4s;
+    -webkit-animation-delay: 0s;
+    -webkit-animation-direction: normal;
+    -webkit-animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes photo53 {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-44%);
+    }
+}
+
+.photo-li .photo-6-2 {
+    transform: translateX(-50%) scale(1);
+}
+
+.photo-li-act6 .photo-6-2 {
+    -webkit-animation: photo62 4s;
+    -webkit-animation-delay: 1s;
+    -webkit-animation-direction: normal;
+    -webkit-animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes photo62 {
+    0% {
+        transform: translateX(-50%) scale(1) rotateY(0deg);
+    }
+    100% {
+        transform: translateX(-50%) scale(0) rotateY(-400deg);
+    }
+}
+
+.photo-li .photo-7-1 {
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.photo-li-act7 .photo-7-1 {
+    -webkit-animation: photo71 2s;
+    -webkit-animation-delay: 1s;
+    -webkit-animation-direction: normal;
+    -webkit-animation-fill-mode: forwards;
+}
+@-webkit-keyframes photo71 {
+    0% {
+		transform: translateX(-50%) scale(1) rotateZ(0deg);
+    }
+    100% {
+       transform: translateX(-50%) scale(0) rotateZ(360deg);
+    }
+}
+.photo-li .photo-7-3{
+	 height: 100%;
+    left: 50%;
+    transform: translateX(-50%) scale(0);
+}
+.photo-li-act7 .photo-7-3 {
+    -webkit-animation: photo73 3s;
+    -webkit-animation-delay: 4s;
+    -webkit-animation-direction: normal;
+    -webkit-animation-fill-mode: forwards;
+}
+@-webkit-keyframes photo73 {
+    0% {
+		transform: translateX(-50%) scale(0) ;
+    }
+    100% {
+        transform: translateX(-50%) scale(1);
+    }
+}
+.sun-bg {
+	background: url(./../img/photos/sun.png)no-repeat;
+	width: 320px;
+	height: 214px;
+	background-size: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+    animation: in164o 10s ease infinite both;
+	z-index: 100;
+}
+
+@-webkit-keyframes in164o {
+    0% {
+        opacity: .9;
+		transform: rotateX(0deg)
+    }
+    40% {
+        opacity: 1;
+		transform: rotateX(10deg)
+    }
+    70% {
+        opacity: .75;
+		transform: rotateX(-5deg)
+    }
+    100% {
+        opacity: 1;
+			transform: rotateX(6deg)
+    }
+}
+.text-bg{
+	background: url(./../img/photos/text.png)no-repeat;
+	width: 100%;
+	height: 100%;
+	background-size: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	 animation: testbg 10s ease infinite both;
+}
+@-webkit-keyframes testbg {
+    0% {
+        opacity: .7;
+	
+    }
+    40% {
+        opacity: 1;
+		
+    }
+    70% {
+        opacity: .75;
+		
+    }
+    100% {
+        opacity: 1;
+			
+    }
+}

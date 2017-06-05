@@ -93,14 +93,7 @@ $(document).ready(function () {
             slideract();
         }
     });
-    // 婚纱照部分滚动
-    var swiper2 = new Swiper('#J_other-photo-wrap', {
-        paginationClickable: true,
-        speed: 500,
-        onSlideChangeStart: function () {
-            photoAct();
-        }
-    });
+
 
 
     var photoAct = function () {
@@ -114,15 +107,8 @@ $(document).ready(function () {
                 $(className1).addClass(className2);
             }, 500);
         };
-        //去掉前后的act状态class
-        if ($('#J_other-photo-wrap .photo-li')[swiper2.realIndex + 1]) {
-            reClass($('#J_other-photo-wrap .photo-li')[swiper2.realIndex + 1], 'photo-li-act' + [swiper2.realIndex]);
-        }
-        if ($('#J_other-photo-wrap .photo-li')[swiper2.realIndex - 1]) {
-            reClass($('#J_other-photo-wrap .photo-li')[swiper2.realIndex - 1], 'photo-li-act' + [swiper2.realIndex]);
-        }
-        //给当前photo加act状态的class
-        addClass($('#J_other-photo-wrap .photo-li')[swiper2.realIndex], 'photo-li-act' + [swiper2.realIndex]);
+        $('.photo-li .p8-box').width(20 * $(window).height() / 31);
+
 
     };
     var slideract = function () {
@@ -151,6 +137,27 @@ $(document).ready(function () {
             // 4 婚纱照横滑
             if (swiper.realIndex == 4) {
                 reClass($('#J_2016'), 'certificate-active');
+                // 婚纱照部分滚动
+                var swiper2 = new Swiper('#J_other-photo-wrap', {
+                    paginationClickable: true,
+                    speed: 1000,
+                    effect: 'fade',
+                    autoplay: 4000,
+                    onSlideChangeStart: function () {
+//                        photoAct();
+						 //去掉前后的act状态class
+						if ($('#J_other-photo-wrap .photo-li')[swiper2.realIndex + 1]) {
+							reClass($('#J_other-photo-wrap .photo-li')[swiper2.realIndex + 1], 'photo-li-act' + (parseInt([swiper2.realIndex], 10) + 2));
+						}
+						if ($('#J_other-photo-wrap .photo-li')[swiper2.realIndex - 1]) {
+							reClass($('#J_other-photo-wrap .photo-li')[swiper2.realIndex - 1], 'photo-li-act' + (parseInt([swiper2.realIndex], 10)));
+						}
+						//给当前photo加act状态的class
+						$($('#J_other-photo-wrap .photo-li')[swiper2.realIndex]).addClass( 'photo-li-act' + (parseInt([swiper2.realIndex], 10) + 1));
+                    }
+                });
+				$($('#J_other-photo-wrap .photo-li')[0]).addClass('photo-li-act1');
+               
                 //                $('#J_2016').removeClass('certificate-active');
             }
             // 5 bless
