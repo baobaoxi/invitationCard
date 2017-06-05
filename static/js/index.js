@@ -82,6 +82,7 @@ $(document).ready(function () {
     setTimeout(function () {
         $('.loading-page').hide();
     }, 500);
+	var swiper2;
     //整体上下滚动
     var swiper = new Swiper('.swiper-container', {
         pagination: '.swiper-pagination',
@@ -138,7 +139,10 @@ $(document).ready(function () {
             if (swiper.realIndex == 4) {
                 reClass($('#J_2016'), 'certificate-active');
                 // 婚纱照部分滚动
-                var swiper2 = new Swiper('#J_other-photo-wrap', {
+				if(swiper2){
+					return;
+				}
+               	swiper2 = new Swiper('#J_other-photo-wrap', {
                     paginationClickable: true,
                     speed: 1000,
                     effect: 'fade',
