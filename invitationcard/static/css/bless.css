@@ -1,0 +1,101 @@
+#J_bless-wrap .bless-list-wrap {
+    height: calc(100% - 120px);
+    position: relative;
+    overflow-y: auto;
+}
+
+.bless-list-wrap .bless-item {
+    padding: 10px;
+    background: rgba(0, 0, 0, .5);
+    display: block;
+    margin: 10px 60px 10px 10px;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 13px;
+}
+
+.bless-list-wrap .bless-fr {
+    margin: 10px 10px 10px 60px;
+}
+
+.bless-list-wrap .bless-list-ul {
+    position: relative;
+}
+
+.bless-list-act {
+    -webkit-animation: blessanimate 100s;
+    -webkit-animation-delay: 0s;
+    -webkit-animation-direction: normal;
+    -webkit-animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes blessanimate {
+    0% {
+        -webkit-transform: translate(0, 0);
+    }
+    100% {
+        -webkit-transform: translate(0, -926px);
+    }
+}
+
+.bless-input-wrap {
+    padding: 2px;
+}
+
+.bless-input-wrap .bless-name {
+    width: 60%;
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    opacity: .8;
+    background: #fff;
+    font-size: 14px;
+}
+
+.bless-input-wrap .bless-num {
+    width: 38%;
+    float: right;
+    height: 30px;
+    line-height: 30px;
+    opacity: .8;
+    box-sizing: border-box;
+    background: #fff;
+    font-size: 14px;
+    border-radius: 0;
+    margin: 0;
+    border: 0;
+}
+
+.bless-input-wrap .bless-inputtext {
+    width: 100%;
+    opacity: .9;
+    margin-top: 2px;
+    height: 50px;
+    margin-bottom: 2px;
+}
+
+.bless-input-wrap .btn {
+    display: block;
+    background: rgb(222, 68, 107);
+    width: 60px;
+    border-radius: 3px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    float: right;
+}
+
+.bless-self-wrap {
+    padding: 10px;
+    background: rgba(234, 87, 87, 0.5);
+    display: block;
+    margin: 10px;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 13px;
+	display: none;
+}
