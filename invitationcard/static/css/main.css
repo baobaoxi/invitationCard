@@ -79,6 +79,11 @@ body {}
     background: #5e4a41;
 }
 
+#J_pre-page {
+    background: url(./../img/prebg.jpg)repeat-y;
+    background-size: 100%;
+}
+
 
 /*
 .timecount-wrap{
@@ -273,9 +278,9 @@ body {}
 }
 
 .previous-name .name-and {
-    background: url(./../img/and.png);
+    background: url(./../img/and.png)no-repeat;
     position: absolute;
-    left: 6rem;
+    left: 6.2rem;
     top: 0.6rem;
     width: 2rem;
     height: 2rem;
@@ -330,12 +335,13 @@ body {}
 }
 
 .pre-address-box {
-    background: rgba(0, 0, 0, .6);
-    padding: 20px;
+    background: url(./../img/time-bg.png)no-repeat;
+	background-size: 100% 8.5rem;
+    padding: 2.5rem 1.4rem;
     box-sizing: border-box;
     width: 100%;
-    height: 120px;
-    color: rgb(196, 189, 151);
+    height: 8.5rem;
+    color: #ce0000;
     font-size: 16px;
     position: absolute;
     bottom: 30px;
@@ -348,7 +354,7 @@ body {}
 }
 
 .pre-address-box .pre-tips {
-    margin-bottom: 10px;
+    margin-bottom: 4px;
 }
 
 .up-arrow-next {
@@ -367,24 +373,339 @@ body {}
     left: -17px;
     width: 34px;
     height: 28px;
-	-webkit-animation: arrowShake 4s infinite;
+    -webkit-animation: arrowShake 4s infinite;
     -webkit-animation-delay: 0s;
     -webkit-animation-timing-function: linear;
     -webkit-animation-fill-mode: backwards;
-	opacity: .8;
+    opacity: .8;
 }
+
 @-webkit-keyframes arrowShake {
     0% {
         opacity: .6;
-		transform: scale(1) translateY(0);
+        transform: scale(1) translateY(0);
     }
     50% {
         opacity: .8;
-		transform: scale(1.2) translateY(5px);
-		
+        transform: scale(1.2) translateY(5px);
     }
-	100{
-		opacity: .6;
-		transform: scale(1) translateY(0);
-	}
+    100 {
+        opacity: .6;
+        transform: scale(1) translateY(0);
+    }
+}
+
+#globalAudio,
+.u-globalAudio-0 {
+    position: fixed;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    z-index: 10000;
+    width: 24px;
+    height: 24px;
+}
+
+.music-wrap {
+    position: fixed;
+    width: 24px;
+    height: 24px;
+}
+
+.music-wrap i {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+}
+
+.music-wrap i.music-icon {
+    background: url(./../img/music/music3.png) no-repeat;
+    background-size: 100%;
+    z-index: 9;
+}
+
+i.music-icon.animing {
+    animation: musicSlide 1.5s ease infinite;
+    -webkit-animation: musicSlide 1.5s ease infinite;
+}
+
+.music-wrap i.circle {
+    display: none;
+}
+
+.music-wrap i.circle-1 {
+    background: url(./../img/music/music3-1.png) no-repeat;
+    background-size: 100%;
+}
+
+.music-wrap i.circle-2 {
+    background: url(./../img/music/music3-2.png) no-repeat;
+    background-size: 100%;
+}
+
+.music-wrap i.circle-3 {
+    background: url(./../img/music/music3-3.png) no-repeat;
+    background-size: 100%;
+}
+
+@keyframes musicSlide {
+    0% {
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+        -webkit-transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+    }
+}
+
+@-webkit-keyframes musicSlide {
+    0% {
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+        -webkit-transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+    }
+}
+
+@-webkit-keyframes myflowUpDownK0meigui1 {
+    0% {
+        -webkit-transform: translate(524px, -52px) rotate(0deg);
+    }
+    100% {
+        -webkit-transform: translate(304px, 1031px) rotate(720deg);
+    }
+}
+
+.myflowUpDown0meigui1 {
+    -webkit-animation: myflowUpDownK0meigui1 6.247334992550536s infinite;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-fill-mode: backwards;
+    -webkit-animation-delay: 0s;
+}
+
+@-webkit-keyframes myflowUpDownK1meigui2 {
+    0% {
+        -webkit-transform: translate(43px, -52px) rotate(0deg);
+    }
+    100% {
+        -webkit-transform: translate(171px, 1031px) rotate(720deg);
+    }
+}
+
+.myflowUpDown1meigui2 {
+    -webkit-animation: myflowUpDownK1meigui2 6.631959641366214s infinite;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-fill-mode: backwards;
+    -webkit-animation-delay: 0.3s;
+}
+
+@-webkit-keyframes myflowUpDownK2meigui3 {
+    0% {
+        -webkit-transform: translate(28px, -52px) rotate(0deg);
+    }
+    100% {
+        -webkit-transform: translate(224px, 1031px) rotate(720deg);
+    }
+}
+
+.myflowUpDown2meigui3 {
+    -webkit-animation: myflowUpDownK2meigui3 8.165791657795937s infinite;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-fill-mode: backwards;
+    -webkit-animation-delay: 0.6s;
+}
+
+@-webkit-keyframes myflowUpDownK3meigui4 {
+    0% {
+        -webkit-transform: translate(528px, -52px) rotate(0deg);
+    }
+    100% {
+        -webkit-transform: translate(333px, 1031px) rotate(720deg);
+    }
+}
+
+.myflowUpDown3meigui4 {
+    -webkit-animation: myflowUpDownK3meigui4 6.080573942851166s infinite;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-fill-mode: backwards;
+    -webkit-animation-delay: 0.8999999999999999s;
+}
+
+@-webkit-keyframes myflowUpDownK4meigui1 {
+    0% {
+        -webkit-transform: translate(30px, -52px) rotate(0deg);
+    }
+    100% {
+        -webkit-transform: translate(562px, 1031px) rotate(720deg);
+    }
+}
+
+.myflowUpDown4meigui1 {
+    -webkit-animation: myflowUpDownK4meigui1 9.251752760154499s infinite;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-fill-mode: backwards;
+    -webkit-animation-delay: 1.2s;
+}
+
+@-webkit-keyframes myflowUpDownK5meigui2 {
+    0% {
+        -webkit-transform: translate(39px, -52px) rotate(0deg);
+    }
+    100% {
+        -webkit-transform: translate(550px, 1031px) rotate(720deg);
+    }
+}
+
+.myflowUpDown5meigui2 {
+    -webkit-animation: myflowUpDownK5meigui2 6.398088769992039s infinite;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-fill-mode: backwards;
+    -webkit-animation-delay: 1.5s;
+}
+
+@-webkit-keyframes myflowUpDownK6meigui3 {
+    0% {
+        -webkit-transform: translate(300px, -52px) rotate(0deg);
+    }
+    100% {
+        -webkit-transform: translate(114px, 1031px) rotate(720deg);
+    }
+}
+
+.myflowUpDown6meigui3 {
+    -webkit-animation: myflowUpDownK6meigui3 8.085331728769741s infinite;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-fill-mode: backwards;
+    -webkit-animation-delay: 1.7999999999999998s;
+}
+
+@-webkit-keyframes myflowUpDownK7meigui4 {
+    0% {
+        -webkit-transform: translate(193px, -52px) rotate(0deg);
+    }
+    100% {
+        -webkit-transform: translate(508px, 1031px) rotate(720deg);
+    }
+}
+
+.myflowUpDown7meigui4 {
+    -webkit-animation: myflowUpDownK7meigui4 8.69332558453753s infinite;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-fill-mode: backwards;
+    -webkit-animation-delay: 2.1s;
+}
+
+@-webkit-keyframes myflowUpDownK8meigui1 {
+    0% {
+        -webkit-transform: translate(244px, -52px) rotate(0deg);
+    }
+    100% {
+        -webkit-transform: translate(314px, 1031px) rotate(720deg);
+    }
+}
+
+.myflowUpDown8meigui1 {
+    -webkit-animation: myflowUpDownK8meigui1 7.003315562448816s infinite;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-fill-mode: backwards;
+    -webkit-animation-delay: 2.4s;
+}
+
+@-webkit-keyframes myflowUpDownK9meigui2 {
+    0% {
+        -webkit-transform: translate(560px, -52px) rotate(0deg);
+    }
+    100% {
+        -webkit-transform: translate(256px, 1031px) rotate(720deg);
+    }
+}
+
+.myflowUpDown9meigui2 {
+    -webkit-animation: myflowUpDownK9meigui2 4.7485625667013185s infinite;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-fill-mode: backwards;
+    -webkit-animation-delay: 2.6999999999999997s;
+}
+
+@-webkit-keyframes myflowUpDownK10meigui3 {
+    0% {
+        -webkit-transform: translate(229px, -52px) rotate(0deg);
+    }
+    100% {
+        -webkit-transform: translate(372px, 1031px) rotate(720deg);
+    }
+}
+
+.myflowUpDown10meigui3 {
+    -webkit-animation: myflowUpDownK10meigui3 7.4095079616657085s infinite;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-fill-mode: backwards;
+    -webkit-animation-delay: 3s;
+}
+
+@-webkit-keyframes myflowUpDownK11meigui4 {
+    0% {
+        -webkit-transform: translate(206px, -52px) rotate(0deg);
+    }
+    100% {
+        -webkit-transform: translate(158px, 1031px) rotate(720deg);
+    }
+}
+
+.myflowUpDown11meigui4 {
+    -webkit-animation: myflowUpDownK11meigui4 7.118267102463975s infinite;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-fill-mode: backwards;
+    -webkit-animation-delay: 3.3s;
+}
+
+.flip-animation-3 {
+    transform-origin: left;
+    animation: flipBook 4s linear 1 alternate 1s both;
+}
+
+@-webkit-keyframes flipBook {
+    0% {
+        /*  动画开始 */
+        transform: rotateY(0deg);
+        /*  旋转0度 */
+    }
+    100% {
+        /*  动画结束 */
+        transform: rotateY(-180deg);
+        /*  旋转到-100度  */
+    }
+}
+
+@-moz-keyframes flipBook {
+    0% {
+        transform: rotateY(0deg);
+    }
+    100% {
+        transform: rotateY(-180deg);
+    }
+}
+
+#J_2012,
+#J_2014,
+#J_2016 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+	overflow: hidden;
 }

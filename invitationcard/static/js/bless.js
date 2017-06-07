@@ -22,7 +22,7 @@ var blessData = [{
 
     {
         name: '**晖',
-        text: '这时刻，是花开的时，是飞彩的时刻，是吉庆的时刻，是你大喜的时刻。祝你：天赐良缘，百年好合。'
+        text: '祝你：天赐良缘，百年好合。'
     },
 
     {
@@ -67,7 +67,29 @@ var bless = {
     renderBless: function () {
         var self = this;
         var tpl = '';
-        $.each(blessData, function (key, value) {
+        var newAttr = [];
+        Array.prototype.remove = function (val) {
+            var index = this.indexOf(val);
+            if (index > -1) {
+                this.splice(index, 1);
+            }
+        };
+        for (var i = 0; i < 4; i++) {
+			var newBless = blessData[Math.round(Math.random() * (blessData.length - 1))]
+            newAttr.push( newBless);
+            blessData.remove(newBless);
+        }
+		if (localStorage && localStorage.blessName && localStorage.blessText) {
+			var opt = {
+				name:localStorage.blessName,
+				text:localStorage.blessText 
+			}
+			var insertIndex = Math.round(Math.random() *4);
+			console.log(insertIndex)
+           newAttr.splice(insertIndex, 0, opt);
+        }
+		console.log(newAttr);
+        $.each(newAttr, function (key, value) {
             var blessClass;
             if (key % 2 == 0) {
                 blessClass = "bless-fl";
@@ -90,15 +112,7 @@ var bless = {
     },
     getSelfBless: function () {
         var me = this;
-        if (localStorage && localStorage.blessName && localStorage.blessText) {
-            var tpl = ' <span class="bless-item ">' +
-                '<label class="name">' + localStorage.blessName + '</label>：' +
-                '<label class="text">' + localStorage.blessText + '</label>' +
-                '</span>';
-            $('.bless-list-ul').prepend(tpl);
-            $('.bless-self-wrap').html(tpl).show();
-			$('#J_bless-wrap .bless-list-wrap').height($(window).height()- $('.bless-self-wrap').height() - 140);
-        }
+        
     },
     addBless: function () {
         $(document).on('click', '.bless-input-wrap .btn', function () {
@@ -109,14 +123,14 @@ var bless = {
                 '<label class="text">' + blessText + '</label>' +
                 '</span>';
             $('.bless-list-ul').prepend(tpl);
-            $('.bless-self-wrap').html(tpl).show();
             if (localStorage) {
                 try {
-					if(blessName && blessName.length == 2){
-						blessName = '*'+blessName.slice(1,2);
-					}else{
-						blessName = '**'+blessName.slice(2,3);
-					}
+                    if (blessName && blessName.length == 2) {
+                        blessName = '*' + blessName.slice(1, 2);
+                    }
+                    else {
+                        blessName = '**' + blessName.slice(2, 3);
+                    }
                     localStorage.blessName = blessName;
                     localStorage.blessText = blessText;
                 }

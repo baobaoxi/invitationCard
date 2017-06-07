@@ -13,43 +13,34 @@
 }
 
 .certificate-active .certificate-box .certificate-photo-box {
-    -webkit-animation: photohide 1.5s;
-    -webkit-animation-delay: 3.5s;
+    -webkit-animation: photohide 3s;
+    -webkit-animation-delay: 4s;
     -webkit-animation-direction: normal;
     -webkit-animation-fill-mode: forwards;
 }
 
+.certificate-box .certificate-card1 {
+    width: 48.5rem;
+    transform: rotate(-13.5deg);
+    left: -24.6rem;
+    position: absolute;
+    top: -11rem;
+   
+
+}
 .certificate-active .certificate-box .certificate-card1 {
-    width: 48.5rem;
-    transform: rotate(-13.5deg);
-    left: -24.6rem;
-    position: absolute;
-    top: -11rem;
-    -webkit-animation: card1act 1.5s;
+	 -webkit-animation: card1act 3s;
     -webkit-animation-direction: normal;
-    -webkit-animation-delay: 5.5s;
-    -webkit-animation-fill-mode: forwards;
-}
-
-.certificate-active .certificate-box .certificate-card2 {
-    width: 48.5rem;
-    transform: rotate(-13.5deg);
-    left: -24.6rem;
-    position: absolute;
-    top: -11rem;
-    -webkit-animation: card2act 1.5s;
-    -webkit-animation-direction: normal;
-    -webkit-animation-delay: 5.5s;
+    -webkit-animation-delay: 5s;
     -webkit-animation-fill-mode: forwards;
 }
 
 @-webkit-keyframes card1act {
     0% {}
     100% {
-        width: 24rem;
         left: -4.5rem;
         top: -2rem;
-        transform: rotate(-13.5deg);
+        transform: rotate(-13.5deg) scale(.5) translateX(-35%) translateY(-55%);
     }
 }
 
@@ -100,13 +91,15 @@
         opacity: 1;
     }
 }
-
-.certificate-active .certificate-box .seal-pic {
-    position: absolute;
-    width: 8rem;
-    right: -20rem;
-    top: -0.8rem;
+.certificate-box .seal-pic{
+	position: absolute;
+    width: 8.6rem;
+    right: 3.6rem;
+    top: 9rem;
+    opacity: 0;
     transform: rotate(15deg);
+}
+.certificate-active .certificate-box .seal-pic {
     -webkit-animation: sealact 2s;
     -webkit-animation-delay: 2s;
     -webkit-animation-direction: normal;
@@ -115,20 +108,10 @@
 
 @-webkit-keyframes sealact {
     0% {
-        right: -10rem;
-        top: -8rem;
-    }
-    40% {
-        right: 4rem;
-        top: 2.8rem;
-    }
-    70% {
-        right: 4rem;
-        top: 2.8rem;
+        opacity: 0;
     }
     100% {
-        right: -10rem;
-        top: -8rem;
+        opacity: 1;
     }
 }
 

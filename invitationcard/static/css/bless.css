@@ -87,6 +87,7 @@
     color: #fff;
     font-size: 14px;
     float: right;
+	cursor: pointer;
 }
 
 .bless-self-wrap {
