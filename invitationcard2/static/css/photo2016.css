@@ -1,0 +1,212 @@
+.certificate-box {
+    width: 100%;
+    position: absolute;
+    height: 100%;
+}
+
+.certificate-box .certificate-photo-box {
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    background: #a89172;
+    box-shadow: 0 0 200px #5e4a41 inset;
+}
+
+.certificate-active .certificate-box .certificate-photo-box {
+    -webkit-animation: photohide 3s;
+    -webkit-animation-delay: 4s;
+    -webkit-animation-direction: normal;
+    -webkit-animation-fill-mode: forwards;
+}
+
+.certificate-box .certificate-card1 {
+    width: 48.5rem;
+    transform: rotate(-13.5deg);
+    left: -24.6rem;
+    position: absolute;
+    top: -11rem;
+   
+
+}
+.certificate-active .certificate-box .certificate-card1 {
+	 -webkit-animation: card1act 3s;
+    -webkit-animation-direction: normal;
+    -webkit-animation-delay: 5s;
+    -webkit-animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes card1act {
+    0% {}
+    100% {
+        left: -4.5rem;
+        top: -2rem;
+        transform: rotate(-13.5deg) scale(.5) translateX(-35%) translateY(-55%);
+    }
+}
+
+@-webkit-keyframes card2act {
+    0% {}
+    100% {
+        width: 24rem;
+        left: -4.5rem;
+        top: -2rem;
+        transform: rotate(-13.5deg);
+        opacity: 0;
+    }
+}
+
+.certificate-box .certificate-photo {
+    width: 100%;
+    top: 2rem;
+    position: absolute;
+}
+
+.certificate-box .ring {
+    display: block;
+    margin: 10px auto;
+}
+
+.star-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@-webkit-keyframes photohide {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes photoshow {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.certificate-box .seal-pic{
+	position: absolute;
+    width: 8.6rem;
+    right: 3.6rem;
+    top: 9rem;
+    opacity: 0;
+    transform: rotate(15deg);
+}
+.certificate-active .certificate-box .seal-pic {
+    -webkit-animation: sealact 2s;
+    -webkit-animation-delay: 2s;
+    -webkit-animation-direction: normal;
+    -webkit-animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes sealact {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.lz-text-box {
+    background: url('./../img/photos/text-bg.png')no-repeat;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 50px;
+    padding: 20px;
+    box-sizing: border-box;
+    color: rgba(255, 255, 255, .7);
+    font-size: 16px;
+}
+
+.lz-text-box .lz-heart {
+    background: url('./../img/photos/text-heart.png')no-repeat;
+    width: 30px;
+    height: 30px;
+    background-size: 100%;
+    display: block;
+    margin: 0 auto;
+    opacity: 0
+}
+
+.certificate-active .lz-heart {
+    -webkit-animation: heartShow 2s;
+    -webkit-animation-delay: 0s;
+    -webkit-animation-direction: normal;
+    -webkit-animation-fill-mode: forwards;
+}
+
+.lz-text-box .lz-line {
+    width: 90%;
+    height: 1px;
+    background: rgba(255, 255, 255, .7);
+    transform: scale(0);
+    position: absolute;
+    left: 5%;
+    top: 30px;
+}
+
+.certificate-active .lz-line {
+    -webkit-animation: lineShow 2s;
+    -webkit-animation-delay: 0s;
+    -webkit-animation-direction: normal;
+    -webkit-animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes lineShow {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@-webkit-keyframes heartShow {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.lz-text-box .lz-text1 {
+    opacity: 0;
+}
+
+.lz-text-box .lz-text2 {
+    opacity: 0;
+}
+
+.certificate-active .lz-text-box .lz-text1 {
+    -webkit-animation: fadeInLeft 2s;
+    -webkit-animation-delay: 0s;
+    -webkit-animation-direction: normal;
+    -webkit-animation-fill-mode: forwards;
+}
+
+.certificate-active .lz-text-box .lz-text2 {
+    -webkit-animation: fadeInRight 2s;
+    -webkit-animation-delay: 0s;
+    -webkit-animation-direction: normal;
+    -webkit-animation-fill-mode: forwards;
+}
+.story-kuang{
+	width: 18rem;
+	height: 100%;
+	background: url(./../img/storykuang.png)no-repeat;
+	background-size: 100% 100%;
+	height: 100%;
+	position: absolute;
+	left: -1rem;
+	top: -1rem;
+}

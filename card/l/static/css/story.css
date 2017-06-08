@@ -1,0 +1,65 @@
+#J_story {}
+
+#J_story .story-l {
+    position: absolute;
+    background: url(./../img/story/L.png)no-repeat;
+    width: 1.78125rem;
+    height: 2.4375rem;
+    background-size: 100%;
+}
+#J_story .story-o1 {
+    position: absolute;
+    background: url(./../img/story/O1.png)no-repeat;
+    width: 1.78125rem;
+    height: 2.4375rem;
+    background-size: 100%;
+}
+#J_story .story-v {
+    position: absolute;
+    background: url(./../img/story/V.png)no-repeat;
+    width: 1.78125rem;
+    height: 2.4375rem;
+    background-size: 100%;
+}
+#J_story .story-e {
+    position: absolute;
+    background: url(./../img/story/E.png)no-repeat;
+    width: 1.78125rem;
+    height: 2.4375rem;
+    background-size: 100%;
+}
+#J_story .story-s {
+    position: absolute;
+    background: url(./../img/story/S.png)no-repeat;
+    width: 1.78125rem;
+    height: 2.4375rem;
+    background-size: 100%;
+}
+#J_story .story-t {
+    position: absolute;
+    background: url(./../img/story/T.png)no-repeat;
+    width: 1.78125rem;
+    height: 2.4375rem;
+    background-size: 100%;
+}
+#J_story .story-o2 {
+    position: absolute;
+    background: url(./../img/story/O2.png)no-repeat;
+    width: 1.78125rem;
+    height: 2.4375rem;
+    background-size: 100%;
+}
+#J_story .story-r {
+    position: absolute;
+    background: url(./../img/story/R.png)no-repeat;
+    width: 1.78125rem;
+    height: 2.4375rem;
+    background-size: 100%;
+}
+#J_story .story-y {
+    position: absolute;
+    background: url(./../img/story/Y.png)no-repeat;
+    width: 1.78125rem;
+    height: 2.4375rem;
+    background-size: 100%;
+}

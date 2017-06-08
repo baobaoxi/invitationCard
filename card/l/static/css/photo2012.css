@@ -1,0 +1,449 @@
+.cloud-wrap {
+    position: absolute;
+    left: 0;
+    /*
+    -webkit-animation: shoolhide 4s linear infinite;
+    -webkit-animation-delay: 4s;
+*/
+    top: 0;
+}
+
+.cloud-wrap i {
+    width: 640px;
+    height: 300px;
+    display: block;
+    position: absolute;
+    opacity: 0;
+    z-index: 0 !important;
+}
+
+.school-wrap-act .cloud-wrap i:nth-child(1) {
+    top: 50px;
+    left: -100px;
+    background: url(./../img/cloud1.png);
+    -webkit-animation: animationKTCloudBg 10s;
+    opacity: 0;
+    -webkit-animation-delay: 2s;
+    -webkit-animation-direction: normal;
+    -webkit-animation-fill-mode: forwards;
+}
+
+.school-wrap-act .cloud-wrap i:nth-child(2) {
+    top: 150px;
+    left: -0px;
+    opacity: 0;
+    background: url(./../img/cloud3.png);
+    -webkit-animation: animationKTCloudBg 10s;
+    -webkit-animation-delay: 0s;
+    -webkit-animation-direction: normal;
+    -webkit-animation-fill-mode: forwards;
+}
+
+
+/*
+
+.cloud-wrap i:nth-child(4) {
+    display: none;
+}
+
+.cloud-wrap i:nth-child(5) {
+    display: none;
+}
+
+.cloud-wrap i:nth-child(6) {
+    display: none;
+}
+
+.cloud-wrap i:nth-child(7) {
+    top: 350px;
+    left: 80px;
+    background: url(./../img/cloud1.png);
+    -webkit-animation: animationKTCloudBg 10s ;
+    -webkit-animation-delay: 0s;
+	-webkit-animation-direction: normal;
+    -webkit-animation-fill-mode: forwards;
+}
+
+.cloud-wrap i:nth-child(8) {
+    display: none;
+}
+
+.cloud-wrap i:nth-child(9) {
+    top: 350px;
+    left: 80px;
+    background: url(./../img/cloud3.png);
+	opacity: 0;
+    -webkit-animation: animationKTCloudBg 10s ;
+    -webkit-animation-delay: 2s;
+	-webkit-animation-direction: normal;
+    -webkit-animation-fill-mode: forwards;
+}
+
+.cloud-wrap i:nth-child(10) {
+    display: none;
+}
+
+.cloud-wrap i:nth-child(11) {
+    display: none;
+}
+
+.cloud-wrap i:nth-child(12) {
+    display: none;
+}
+*/
+
+@-webkit-keyframes animationKTCloudBg {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale(0.5) translate(-300px, 300px) rotateX(0deg) rotateY(0deg)
+    }
+    /*
+    33% {
+        opacity: 1;
+        -webkit-transform: scale(1) translate(-80px, 80px) rotateX(20deg) rotateY(-20deg)
+    }
+    66% {
+        opacity: .8;
+        -webkit-transform: scale(1.5) translate(100px, -100px) rotateX(30deg) rotateY(-10deg)
+    }
+*/
+    100% {
+        opacity: .95;
+        -webkit-transform: scale(1.8) translate(300px, -300px) rotateX(0deg) rotateY(0deg)
+    }
+}
+
+.previous-page .previous-text-box img {
+    width: 100%;
+}
+
+.previous-page .previous-text-box .previous-text-1 {}
+
+.previous-page .previous-text-box .previous-text-2 {}
+
+.previous-page .previous-text-box .previous-text-3 {}
+
+.previous-page .previous-text-box .previous-text-4 {}
+
+.previous-page .previous-text-box .previous-text-5 {}
+
+.school-wrap {
+    background: linear-gradient( #00080e 0%, #024e8a 50%, #83c7fd 100%);
+    background-size: 100% 200%;
+    background-position: 0 -100%;
+    /*
+    -webkit-animation: schoolWrapFlow 3s;
+    -webkit-animation-direction: normal;
+    -webkit-animation-delay: 0.2s;
+    -webkit-animation-fill-mode: forwards;
+*/
+}
+
+.school-wrap-act .school-sky {
+    background: linear-gradient( #00080e 0%, #024e8a 50%, #83c7fd 100%);
+    position: absolute;
+    top: -100%;
+    width: 100%;
+    height: 200%;
+    left: 0;
+    -webkit-animation: schoolWrapFlow 5s;
+    -webkit-animation-direction: normal;
+    -webkit-animation-delay: 0.2s;
+    -webkit-animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes schoolWrapFlow {
+    0% {
+        top: -100%;
+    }
+    100% {
+        top: 0;
+    }
+}
+
+.school-wrap .school-img-box {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.school-wrap .school-img-box .school-img {
+    position: absolute;
+    width: 130%;
+    bottom: 0;
+    left: -15%;
+}
+
+.school-wrap-act .school-img-box .school-img {
+    -webkit-animation: schoolImg 5s;
+    -webkit-animation-direction: normal;
+    -webkit-animation-delay: 6s;
+    -webkit-animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes schoolImg {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.6;
+    }
+}
+
+.school-wrap .school-img-box .school-door {
+    position: absolute;
+    left: 19.5%;
+    bottom: 3.5%;
+    width: 9.5rem;
+    /*
+    width: 58%;
+    -webkit-transform-origin: 30% 86%;
+    -webkit-transform: scale(5);
+*/
+}
+
+.school-wrap .school-img-box .school-door-act {
+    -webkit-animation: schoolDoor 3s linear infinite;
+}
+
+@-webkit-keyframes schoolDoor {
+    0% {}
+    100% {
+        opacity: 0;
+        -webkit-transform-origin: 30% 86%;
+        -webkit-transform: scale(6);
+    }
+}
+
+@-webkit-keyframes shoolhide {
+    0% {}
+    100% {
+        opacity: .0;
+    }
+}
+
+.rainbow-wrap {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    top: 100px;
+    left: 0;
+    background: linear-gradient( #ffc700 0%, #e91e1e 33%, #6f27b0 66%, #00ff88 100%);
+    background-position: 100% 0;
+    animation: bgSize 5s infinite ease-in-out alternate;
+}
+
+@keyframes bgSize {
+    0% {
+        background-size: 100% 300%;
+    }
+    100% {
+        background-size: 100% 100%;
+    }
+}
+
+.school-wrap-act .star-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 40%;
+    opacity: 0;
+    -webkit-animation: showStar 2s;
+    -webkit-animation-direction: normal;
+    -webkit-animation-delay: 6s;
+    -webkit-animation-fill-mode: forwards;
+}
+
+#J_2012 .star-bg img {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+}
+
+@-webkit-keyframes showStar {
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.school-wrap-act .star-bg .skyUpDown12wstar1 {
+    -webkit-animation: twinkleStar 8s linear infinite;
+    /*	opacity: 0;*/
+    -webkit-animation-delay: 3s;
+}
+
+.school-wrap-act .star-bg .skyUpDown13wstar2 {
+    -webkit-animation: twinkleStar 8s linear infinite;
+    -webkit-animation-delay: 3.5s;
+    /*	opacity: 0;*/
+}
+
+.school-wrap-act .star-bg .skyUpDown10wstar3 {
+    -webkit-animation: twinkleStar 8s linear infinite;
+    -webkit-animation-delay: 4s;
+    /*	opacity: 0;*/
+}
+
+.school-wrap-act .star-bg .skyUpDown11wstar4 {
+    -webkit-animation: twinkleStar 8s linear infinite;
+    -webkit-animation-delay: 5s;
+    /*	opacity: 0;*/
+}
+
+@-webkit-keyframes twinkleStar {
+    0% {
+        opacity: 0
+    }
+    10% {
+        opacity: 1
+    }
+    25% {
+        opacity: 0
+    }
+    35% {
+        opacity: 1
+    }
+    55% {
+        opacity: 0
+    }
+    70% {
+        opacity: 1
+    }
+    90% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#J_2012 .text-box {
+    position: absolute;
+    left: -5%;
+    height: 100%;
+    width: 30%;
+    top: 0;
+    z-index: 10;
+    background: rgba(0, 0, 0, .5);
+    color: #fff;
+    padding: 10px;
+    font-size: 20px;
+    transform: translateX(-100%);
+    writing-mode: tb-rl;
+}
+
+.school-wrap-act .text-box {
+    -webkit-animation: textSchoolShow 2s;
+    -webkit-animation-delay: 0s;
+    -webkit-animation-direction: normal;
+    -webkit-animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes textSchoolShow {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes textSchoolShow {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+#J_2012 .text-box .schooltext1 {
+    margin-top: 40px;
+    margin-right: 10px;
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0)
+}
+
+#J_2012 .text-box .schooltext2 {
+    margin-top: 60px;
+    margin-right: 10px;
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0)
+}
+
+.school-wrap-act .text-box .schooltext1 {
+    -webkit-animation: fadeInDown 3s;
+    -webkit-animation-delay: 1s;
+    -webkit-animation-direction: normal;
+    -webkit-animation-fill-mode: forwards;
+}
+
+.school-wrap-act .text-box .schooltext2 {
+    -webkit-animation: fadeInUp 4s;
+    -webkit-animation-delay: 2s;
+    -webkit-animation-direction: normal;
+    -webkit-animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0)
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none
+    }
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -100%, 0);
+        -ms-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0)
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        -ms-transform: none;
+        transform: none
+    }
+}
+
+@-webkit-keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0)
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 100%, 0);
+        -ms-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0)
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        -ms-transform: none;
+        transform: none
+    }
+}

@@ -1,0 +1,58 @@
+<html>
+
+<head>
+    <style>
+        @-webkit-keyframes name {
+            0% {
+                /*  动画开始 */
+                transform: rotateY(0deg);
+                /*  旋转0度 */
+            }
+            100% {
+                /*  动画结束 */
+                transform: rotateY(-100deg);
+                /*  旋转到-100度  */
+            }
+        }
+        
+        @-moz-keyframes name {
+            0% {
+                transform: rotateY(0deg);
+            }
+            100% {
+                transform: rotateY(-100deg);
+            }
+        }
+        
+        #gao2 {
+            margin: 100px auto;
+            width: 400px;
+            border: 1px solid #ccc;
+            perspective: 1000px;
+            /*  透视，达到3D效果  */
+        }
+        
+        #gao {
+            transform-origin: left;
+            /*  动画基点，这里是以左边为基点 */
+            -moz-animation: name 0.5s linear infinite 0s both;
+            /*  兼容火狐浏览器 */
+            animation: name 2s linear 1 alternate 1s both;
+        }
+        
+        img {
+            width: 400px;
+            height: 400px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="gao2">
+        <div id="gao">
+            <img src="aa.jpg" alt="">
+        </div>
+    </div>
+</body>
+</html
